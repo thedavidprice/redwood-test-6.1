@@ -16,16 +16,16 @@ import { useAuth } from './auth'
 const Routes = () => {
   return (
     <Router useAuth={useAuth}>
+      <Set wrap={ScaffoldLayout} title="Users" titleTo="adminUsers" buttonLabel="New User" buttonTo="adminNewUser">
+        <Route path="/admin/users/new" page={AdminUserNewUserPage} name="adminNewUser" />
+        <Route path="/admin/users/{id:Int}/edit" page={AdminUserEditUserPage} name="adminEditUser" />
+        <Route path="/admin/users/{id:Int}" page={AdminUserUserPage} name="adminUser" />
+        <Route path="/admin/users" page={AdminUserUsersPage} name="adminUsers" />
+      </Set>
       <Route path="/login" page={LoginPage} name="login" />
       <Route path="/signup" page={SignupPage} name="signup" />
       <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" />
       <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" />
-      <Set wrap={ScaffoldLayout} title="UserExamples" titleTo="userExamples" buttonLabel="New UserExample" buttonTo="newUserExample">
-        <Route path="/user-examples/new" page={UserExampleNewUserExamplePage} name="newUserExample" />
-        <Route path="/user-examples/{id:Int}/edit" page={UserExampleEditUserExamplePage} name="editUserExample" />
-        <Route path="/user-examples/{id:Int}" page={UserExampleUserExamplePage} name="userExample" />
-        <Route path="/user-examples" page={UserExampleUserExamplesPage} name="userExamples" />
-      </Set>
       <Route path="/" page={HomePage} name="home" />
       <Route notfound page={NotFoundPage} />
     </Router>
