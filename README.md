@@ -112,7 +112,7 @@ Don't go live without auth! Lock down your app with Redwood's built-in, database
 yarn rw setup auth --help
 ```
 
-## Next Steps
+## Next Step
 
 The best way to learn Redwood is by going through the comprehensive [tutorial](https://redwoodjs.com/docs/tutorial/foreword) and joining the community (via the [Discourse forum](https://community.redwoodjs.com) or the [Discord server](https://discord.gg/redwoodjs)).
 
